@@ -1,5 +1,4 @@
-FROM debian:jessie
-MAINTAINER Viktor Petersson <vpetersson@wireload.net>
+FROM resin/rpi-raspbian:latest
 
 RUN apt-get update && \
     apt-get -y install git-core net-tools python-pip python-netifaces python-simplejson python-imaging python-dev sqlite3 libffi-dev libssl-dev && \
