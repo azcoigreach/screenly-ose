@@ -1,4 +1,4 @@
-FROM hypriot/armhf-busybox
+FROM hypriot/arm-pyinstaller
 
 RUN apt-get update && apt-get upgrade
 RUN apt-get -y install git-core net-tools \
