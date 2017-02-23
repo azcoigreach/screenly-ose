@@ -22,7 +22,7 @@ COPY ansible/roles/screenly/files/screenly.conf /home/pi/.screenly/screenly.conf
 COPY . /home/pi/screenly
 RUN chown -R pi:pi /home/pi
 
-USER pi
+USER root
 WORKDIR /home/pi/screenly
 
 EXPOSE 8080
