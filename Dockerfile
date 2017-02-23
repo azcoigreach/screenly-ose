@@ -1,7 +1,7 @@
 FROM resin/rpi-raspbian
 
-RUN apt-get update && \
-    apt-get -y install git-core net-tools \
+RUN apt-get update && apt-get upgrade
+RUN apt-get -y install git-core net-tools \
     python-pip python-netifaces python-simplejson python-imaging python-dev \
     sqlite3 \ 
     libffi-dev libssl-dev gcc && \
