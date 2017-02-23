@@ -12,18 +12,18 @@ ADD requirements.txt /tmp/requirements.txt
 RUN pip install -r /tmp/requirements.txt
 
 # Create runtime user
-RUN useradd pi
+# RUN useradd pi
 
 # Install config file and file structure
-RUN mkdir -p /home/pi/.screenly /home/pi/screenly /home/pi/screenly_assets
-COPY ansible/roles/screenly/files/screenly.conf /home/pi/.screenly/screenly.conf
+RUN mkdir -p /root/.screenly /root/screenly /root/screenly_assets
+COPY ansible/roles/screenly/files/screenly.conf /root/.screenly/screenly.conf
 
 # Copy in code base
-COPY . /home/pi/screenly
-RUN chown -R pi:pi /home/pi
+COPY . /root/screenly
+RUN chown -R pi:pi /root/screenly
 
-USER root
-WORKDIR /home/pi/screenly
+# USER pi
+WORKDIR /root/screenly
 
 EXPOSE 8080
 
