@@ -20,7 +20,7 @@ COPY ansible/roles/screenly/files/screenly.conf /root/.screenly/screenly.conf
 
 # Copy in code base
 COPY . /root/screenly
-RUN chown -R pi:pi /root/screenly
+# RUN chown -R pi:pi /root/screenly
 
 # USER pi
 WORKDIR /root/screenly
